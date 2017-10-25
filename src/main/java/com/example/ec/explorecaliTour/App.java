@@ -33,6 +33,7 @@ public class App implements CommandLineRunner
     public static void main( String[] args )throws RestClientException, IOException {
 		SpringApplication.run(App.class, args);
     System.out.println("Explorecali tour microservice.");
+    System.out.println("Tour service to add and remove tours");
     }
     
     @Override
