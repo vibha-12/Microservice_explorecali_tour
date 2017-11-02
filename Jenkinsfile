@@ -1,7 +1,7 @@
 pipeline {
     
     
-        git url: "https://github.com/vibha-12/Microservice_explorecali_tour.git", credentialsId: 'lalta69vibha@gmail.com'
+        Git url: "https://github.com/vibha-12/Microservice_explorecali_tour.git", credentialsId: 'lalta69vibha@gmail.com'
     
         sh "git rev-parse HEAD > .git/commit-id"
         def commit_id = readFile('.git/commit-id').trim()
