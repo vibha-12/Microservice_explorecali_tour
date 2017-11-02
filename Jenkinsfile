@@ -1,7 +1,7 @@
 pipeline {
+    docker.withRegistry('12345docker', '12345docker') {
     
-    
-        Git url: "https://github.com/vibha-12/Microservice_explorecali_tour.git", credentialsId: 'lalta69vibha@gmail.com'
+        git url: "https://github.com/vibha-12/Microservice_explorecali_tour.git", credentialsId: 'lalta69vibha@gmail.com'
     
         sh "git rev-parse HEAD > .git/commit-id"
         def commit_id = readFile('.git/commit-id').trim()
@@ -15,3 +15,5 @@ pipeline {
         app.push "${commit_id}"
    
 }
+}
+
