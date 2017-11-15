@@ -52,7 +52,7 @@ public class TourController {
 		String url1="http://explorecali/tourAdd/"+tourPkgCode+"/"+tourPkgName+"/"+i+"/"+tourDto.getTitle()+"/"+tourDto.getDescription()+"/"+tourDto.getBlurb()+"/"+tourDto.getPrice()+"/"+tourDto.getBullets()+"/"+tourDto.getDuration()+"/"+tourDto.getKeywords()+"/"+tourDto.getDifficulty()+"/"+tourDto.getRegion();
 		String abc1;
 		abc1= restTemplate.getForObject(url1,String.class);
-		System.out.println("");
+		
 		//tourRatingService.createTourPkg(tour,tourId,ratingDto,tourRatingRepository);
 		 tourRepository.save(new Tour(tourDto.getId(),tourDto.getTitle(),tourDto.getDescription(),tourDto.getBlurb(),tourDto.getPrice(),tourDto.getBullets(),tourDto.getDuration(),tourDto.getKeywords(),tourPk,tourDto.getDifficulty(),tourDto.getRegion()));
 	 return ResponseEntity.status(HttpStatus.CREATED).build();	
